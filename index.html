@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    	<meta charset="utf-8">
+  <!-- <link rel="stylesheet" type="text/css" href="VersatilePCP.css"> -->
+	    <title>Lymphopenia Nomogram</title>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+    <div id="plot_div"></div>
+    <p>
+      <label> Brain Dose mean (Gy) =  </label>
+      <input type="number" min="5", max="50" value="5.0" id="brain_dose">
+      <!--
+      <label> Brain Dose mean = <span id="brain_dose_value">..</span> Gy </label>
+      <input type="range" min="5", max="50" step="1" value="45" id="brain_dose_slider">
+      -->
+
+    </p>
+    <p>
+      <input id="male" type="radio" name="gender" value="0" >Male<br>
+      <input id="female" type="radio" name="gender" value="1" checked="checked">Female<br>
+    </p>
+    <p>
+      <label> BaseLine ALC (uL) </label>
+      <input type="number" min="0.0", max="7.0" value="5.0" id="baseline">
+    </p>
+    <script src="lymphopenia.js"></script>
+    <p>
+      <label> Probability = <span id="slp_value">..</span> % </label>
+    </p>
+</body>
+</html>
